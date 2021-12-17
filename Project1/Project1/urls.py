@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Project1.views import goodBye, welcome #Importamos las funciones o vistas
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('welcome/', welcome),  #Añadimos a la url y llamamos a la vista que tiene la info
+    path('bye/', goodBye),
 ]
